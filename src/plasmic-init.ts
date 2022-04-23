@@ -1,10 +1,10 @@
-import {
-  initPlasmicLoader,
-  InitOptions,
-} from "@plasmicapp/loader-gatsby";
+import { initPlasmicLoader, InitOptions } from "@plasmicapp/loader-gatsby"
+import DemoForm from "./components/demo-form"
 
-export function initPlasmicLoaderWithRegistrations(plasmicOptions: InitOptions) {
-  const PLASMIC = initPlasmicLoader(plasmicOptions);
+export function initPlasmicLoaderWithRegistrations(
+  plasmicOptions: InitOptions
+) {
+  const PLASMIC = initPlasmicLoader(plasmicOptions)
 
   // You can register any code components that you want to use here; see
   // https://docs.plasmic.app/learn/code-components-ref/
@@ -15,5 +15,12 @@ export function initPlasmicLoaderWithRegistrations(plasmicOptions: InitOptions) 
 
   // PLASMIC.registerComponent(...);
 
-  return PLASMIC;
+  PLASMIC.registerComponent(DemoForm, {
+    name: "DemoForm",
+    props: {
+      formUrl: "string",
+    },
+  })
+
+  return PLASMIC
 }
