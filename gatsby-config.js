@@ -6,21 +6,19 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
-    {
-      resolve: "@plasmicapp/loader-gatsby",
-      options: {
-        projects: [
-          {
-            id: "iFD7sWTTECf1EZbUTTwubT",
-            token:
-              "jdGAbkoYBRbW5WgiVOKeWKVMXklBKbVCvmtQ3qqyOfMGvCsjiR3W0hrizyCvGliP4RcwzgL9Tnm0hGnfPA",
-          },
-        ], // An array of project ids.
-        defaultPlasmicPage: require.resolve(
-          "./src/templates/defaultPlasmicPage.tsx"
-        ),
+
+{
+  resolve: "@plasmicapp/loader-gatsby",
+  options: {
+    projects: [
+      {
+        id: "iFD7sWTTECf1EZbUTTwubT",
+        token: "jdGAbkoYBRbW5WgiVOKeWKVMXklBKbVCvmtQ3qqyOfMGvCsjiR3W0hrizyCvGliP4RcwzgL9Tnm0hGnfPA",
       },
-    },
+    ], // An array of project ids.
+    defaultPlasmicPage: require.resolve("./src/templates/defaultPlasmicPage.tsx"),
+  },
+},
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
